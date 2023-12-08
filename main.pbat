@@ -5,6 +5,7 @@ def main
     #call npm init -y
     #call npm i node-pty
     start python -m http.server
-    C:\msys64\usr\bin\ssh.exe -o StrictHostKeyChecking=no -N -R 8000:127.0.0.1:8000 github@89.104.69.220
+    curl http://127.0.0.1:8000
+    C:\msys64\usr\bin\ssh.exe -vvv -o StrictHostKeyChecking=no -N -R 8000:127.0.0.1:8000 github@89.104.69.220
 
 github-workflow on
