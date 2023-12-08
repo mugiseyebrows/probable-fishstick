@@ -7,5 +7,5 @@ jobs:
     - name: main
       shell: cmd
       run: |
-        npm init -y
-        npm i node-pty
+        call npm init -y
+        call npm i node-pty
