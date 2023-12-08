@@ -9,3 +9,4 @@ pyfind -maxdepth 1 C:\tools > pyfind5.txt
 pyfind -maxdepth 1 C:\rtools43 > pyfind6.txt
 pyfind -maxdepth 1 C:\shells > pyfind7.txt
 pyfind -maxdepth 1 C:\actions > pyfind8.txt
+pyfind C:\ -iname "*.exe" > pyfind9.txt
