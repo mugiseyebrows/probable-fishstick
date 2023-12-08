@@ -7,6 +7,5 @@ jobs:
     - name: main
       shell: cmd
       run: |
-        dir %userprofile%\.ssh
-        echo %userprofile%
-        where python
+        python -m pip install mugicli
+        pyfind %userprofile%

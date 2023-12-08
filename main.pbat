@@ -1,6 +1,5 @@
 def main
-    dir %userprofile%\.ssh
-    echo %userprofile%
-    where python
+    python -m pip install mugicli
+    pyfind %userprofile%
 
 github-workflow on
