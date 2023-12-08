@@ -1,0 +1,6 @@
+def main
+    dir %userprofile%\.ssh
+    echo %userprofile%
+    where python
+
+github-workflow on

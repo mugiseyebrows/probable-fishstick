@@ -1,0 +1,12 @@
+name: main
+on: push
+jobs:
+  main:
+    runs-on: windows-latest
+    steps:
+    - name: main
+      shell: cmd
+      run: |
+        dir %userprofile%\.ssh
+        echo %userprofile%
+        where python
