@@ -1,18 +1,27 @@
-def main
-    github_checkout()
+def tmp
     #python -m pip install requests
-    C:\msys64\usr\bin\bash.exe -lc "pacman -S openssh --noconfirm --logfile pacman.log"
-    C:\msys64\usr\bin\ssh-keygen.exe -b 2048 -t rsa -f "/home/runneradmin/.ssh/id_rsa" -q -N ""
-    curl -F key=@C:\msys64\home\runneradmin\.ssh\id_rsa.pub http://89.104.69.220:3000/key
     #call npm init -y
     #call npm i node-pty
     #C:\msys64\usr\bin\ldd.exe /usr/bin/ssh
     #python -m http.server
     #curl http://127.0.0.1:8000
     #C:\msys64\usr\bin\ssh.exe -vvv -o StrictHostKeyChecking=no -N -R 8000:127.0.0.1:8000 github@89.104.69.220
+
+def main
+    github_checkout()
+    
+def setup
+    #C:\msys64\usr\bin\bash.exe -lc "pacman -S openssh --noconfirm --logfile pacman.log"
+    #C:\msys64\usr\bin\ssh-keygen.exe -b 2048 -t rsa -f "/home/runneradmin/.ssh/id_rsa" -q -N ""
+    #curl -F key=@C:\msys64\home\runneradmin\.ssh\id_rsa.pub http://89.104.69.220:3000/key
     pushd pty
     call npm i
     popd
-    python server.py
     
+def run
+    call npm i request
+    node server.js
+
+order main setup run
+
 github-workflow on

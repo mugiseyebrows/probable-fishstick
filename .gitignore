@@ -1,2 +1,2 @@
-pty/node_modules/
-pty/package-lock.json
+node_modules/
+package-lock.json
