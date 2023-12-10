@@ -10,7 +10,7 @@ def tmp
 def main
     github_checkout()
     
-def setup
+def setup_windows if runner.os == 'Windows'
     echo ${{ runner.os }}
     #C:\msys64\usr\bin\bash.exe -lc "pacman -S openssh --noconfirm --logfile pacman.log"
     #C:\msys64\usr\bin\ssh-keygen.exe -b 2048 -t rsa -f "/home/runneradmin/.ssh/id_rsa" -q -N ""
@@ -18,11 +18,14 @@ def setup
     pushd pty
     call npm i
     popd
-    
+
+def setup_linux if runner.os == 'Linux'
+    echo ${{ runner.os }}
+
 def run
     #call npm i request
     #node server.js
 
-order main setup run
+order main setup_windows setup_linux run
 
 github-workflow on
