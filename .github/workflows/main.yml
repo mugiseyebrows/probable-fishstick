@@ -9,11 +9,7 @@ jobs:
     - name: setup
       shell: cmd
       run: |
+        echo ${{ runner.os }}
         pushd pty
         call npm i
         popd
-    - name: run
-      shell: cmd
-      run: |
-        call npm i request
-        node server.js
