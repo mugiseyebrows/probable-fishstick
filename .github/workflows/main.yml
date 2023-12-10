@@ -4,17 +4,5 @@ jobs:
   main:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v3
-      name: checkout
-    - name: setup_windows
-      shell: cmd
-      run: |
-        echo ${{ runner.os }}
-        pushd pty
-        call npm i
-        popd
-      if: runner.os == 'Windows'
-    - name: setup_linux
-      shell: cmd
-      run: echo ${{ runner.os }}
-      if: runner.os == 'Linux'
+    - name: terminal
+      uses: mugiseyebrows/terminal
