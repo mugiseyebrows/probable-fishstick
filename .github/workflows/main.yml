@@ -5,4 +5,4 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: terminal
-      uses: mugiseyebrows/terminal@v4
+      uses: mugiseyebrows/terminal@v5
